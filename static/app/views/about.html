@@ -1,0 +1,24 @@
+<div class="media panel panel-default" ng-repeat="result in hits">
+  <a class="media-left" href="#/profile/{{UserService.get(result._source.author)._id}}">
+    <img src="{{UserService.get(result._source.author).picture.thumbnail}}" alt="...">
+  </a>
+  <div class="media-body panel-body">
+			<h4 class="media-heading"><a href="#/profile/{{user._id}}">{{UserService.get(result._source.author).name.first}} {{UserService.get(result._source.author).name.last}}</a></h4>
+		<small class="text-muted">{{result._source._created}}</small>
+			<div ng-bind-html="result._source.content | highlight:search">{{result._source.content}}</div>
+  </div>
+</div>
+
+<div class="panel panel-default clearfix">
+	<div ng-repeat="user in users" class="media col-md-3">
+		<a class="pull-left" href="#/profile/{{user._id}}">
+			<img class="media-object img-rounded" src="{{user.picture.thumbnail}}">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">
+					<a href="#/profile/{{user._id}}">{{user.name.first}} {{user.name.last}}</a>
+				</h4>
+			<p>{{user.location.city}}, {{user.location.state}}</p>
+		</div>
+	</div>
+</div>

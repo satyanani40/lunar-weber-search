@@ -1,0 +1,140 @@
+<div class="container" style="width:">
+    <div class="row">
+        <!--<div class="col-sm-offset-4 col-sm-3" style="border-radius:50% !important;">
+            <div class="well" style="border-radius:50% !important;">
+                <h1 class="text-center" style="color: rgb(29, 159, 163);font-size:170px;">w</h1>
+            </div>
+        </div>-->
+    </div>
+    <div class="row" style="padding-top:20px;">
+        <div class="col-sm-offset-2 col-sm-7 panel">
+
+
+
+          <form method="post"  name="signupForm" ng-submit="searching()" >
+              <div class="panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group"
+                                     ng-class="{ 'has-success' : signupForm.email.$valid && signupForm.email.$dirty, 'has-error' : signupForm.email.$invalid && signupForm.email.$dirty }">
+                                    <input class="form-control input-md" type="text"  name="q" ng-model="search"
+                                            placeholder="Search anything in Weber" autofocus />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-offset-4 col-sm-4">
+                                <button ng-click = "registerUser()" type="submit"
+                                        class="btn btn-sm btn-md btn-block ">Search Weber
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+          </form>
+        </div>
+    </div>
+    <div class="row" style="padding-top:20px;">
+        <div class="col-sm-offset-2 col-sm-7" style="padding-bottom:10px;">
+            <h4 class="text-center">
+                <b>Matched</b>&nbsp;(total <b>350</b>)
+            </h4>
+        </div>
+        <div class="col-sm-offset-2 col-sm-7 panel" style="">
+            <br>
+          <form method="post" ng-submit="signup()" name="signupForm">
+
+              <div class="panel media panel-default" ng-repeat="x in results">
+                    <div class="media-body panel-heading">
+                        <a class="pull-left" style="padding: 5px;" href="">
+                            <img style="width:28px" class="media-object img-circle" src="http://api.randomuser.me/portraits/thumb/men/68.jpg" alt="">
+                        </a>
+                        <strong>{{ x.id }}</strong> is matched with you.
+                        <br>
+                        <small class="text-muted"><span class="glyphicon glyphicon-time"></span>
+                            <span am-time-ago="post._created">{{ x._updated }}</span></small>
+                        <br>
+                    </div>
+                    <p class="panel-body">{{ x.content }}</p>
+              </div>
+          </form>
+
+        </div>
+    </div>
+
+    <div class="row" style="padding-top:25px;">
+        <div class="col-sm-offset-2 col-sm-7" style="padding-bottom:10px;">
+            <h4 class="text-center"><b>Persons</b>&nbsp;(total <b>20</b>)</h4>
+        </div>
+        <div class="col-sm-offset-2 col-sm-7 panel">
+            <br>
+          <form method="post" ng-submit="signup()" name="signupForm">
+              <div class="panel media panel-default">
+                    <div class="media-body panel-body">
+                        <a class="pull-left" style="padding: 5px;" href="">
+                            <img style="width:28px" class="media-object" src="http://api.randomuser.me/portraits/thumb/men/63.jpg" alt="">
+                        </a>
+                        <strong>
+                            <a href=""><h5><b style="color:#444;">
+                                Vegeshna Satyanarayana Raju</b></h5>
+                            </a>
+                        </strong>
+                    </div>
+              </div>
+          </form>
+          <form method="post" ng-submit="signup()" name="signupForm">
+              <div class="panel media panel-default">
+                    <div class="media-body panel-body">
+                        <a class="pull-left" style="padding: 5px;" href="">
+                            <img style="width:28px" class="media-object" src="http://api.randomuser.me/portraits/thumb/men/63.jpg" alt="">
+                        </a>
+                        <strong>
+                            <a href=""><h5><b style="color:#444;">
+                                Surya Chowdary Muppalla</b></h5>
+                            </a>
+                        </strong>
+                    </div>
+              </div>
+          </form>
+        </div>
+    </div>
+
+    <div class="row" style="padding-top:25px;">
+        <div class="col-sm-offset-2 col-sm-7" style="padding-bottom:10px;">
+            <h4 class="text-center"><b>Locations</b>&nbsp;(total <b>20</b>)</h4>
+        </div>
+        <div class="col-sm-offset-2 col-sm-7 panel">
+            <br>
+          <form method="post" ng-submit="signup()" name="signupForm">
+              <div class="panel media panel-default">
+                    <div class="media-body panel-body">
+                        <a class="pull-left" style="padding:2px ;" href="">
+                            <i class="media-object glyphicon glyphicon-globe"></i>
+                        </a>
+                        <strong>
+                            <a href=""><b style="color:#444;padding-left:5px">
+                                Hyderabad, Miyapur</b>
+                            </a>
+                        </strong>
+                    </div>
+              </div>
+          </form>
+          <form method="post" ng-submit="signup()" name="signupForm">
+              <div class="panel media panel-default">
+                    <div class="media-body panel-body">
+                        <a class="pull-left" style="padding:2px ;" href="">
+                            <i class="media-object glyphicon glyphicon-globe"></i>
+                        </a>
+                        <strong>
+                            <a href=""><b style="color:#444;padding-left:5px">
+                                K.Zaddavaripalem, Guntur</b>
+                            </a>
+                        </strong>
+                    </div>
+              </div>
+          </form>
+        </div>
+    </div>
+
+</div>
